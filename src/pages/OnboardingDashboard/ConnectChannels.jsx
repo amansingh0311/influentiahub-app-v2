@@ -29,7 +29,7 @@ export function ConnectChannels() {
   };
  
   return (
-    <Card className="h-[calc(100vh-6rem)] w-full max-w-[20rem] p-4 border-r">
+    <Card className="h-[calc(100vh-7rem)] w-full max-w-[20rem] p-4 border-r">
       <div className="mb-2">
         <Typography variant="h5" color="blue-gray">
           Connect Channels
