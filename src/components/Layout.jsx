@@ -1,12 +1,12 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 
 const navigation = [
-  { name: 'Dashboard', href: '/dashboard', current: true },
-  { name: 'Create', href: '/create', current: false },
-  { name: 'Analyze', href: '/analyze', current: false },
-  { name: 'Calendar', href: '/calendar', current: false },
+  { name: 'Dashboard', href: '/dashboard' },
+  { name: 'Create', href: '/create' },
+  { name: 'Analyze', href: '/analyze' },
+  { name: 'Calendar', href: '/calendar' },
 ];
 
 function classNames(...classes) {
@@ -14,12 +14,15 @@ function classNames(...classes) {
 }
 
 export default function Layout() {
+  const location = useLocation();
+  const currentPath = location.pathname;
+
   return (
     <Disclosure as="nav" className="bg-white border-b border-gray-200 px-[2%]">
       <div className="mx-auto px-2">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            {/* Mobile menu button*/}
+            {/* Mobile menu button */}
             <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
               <span className="absolute -inset-0.5" />
               <span className="sr-only">Open main menu</span>
@@ -41,9 +44,9 @@ export default function Layout() {
                   <Link
                     key={item.name}
                     to={item.href}
-                    aria-current={item.current ? 'page' : undefined}
+                    aria-current={item.href === currentPath ? 'page' : undefined}
                     className={classNames(
-                      item.current ? 'bg-[#F5F5F5] text-black' : 'text-gray-700 hover:bg-gray-200 hover:text-gray-900',
+                      item.href === currentPath ? 'bg-[#F5F5F5] text-black' : 'text-gray-700 hover:bg-gray-200 hover:text-gray-900',
                       'rounded-md px-3 py-2 text-sm font-medium'
                     )}
                   >
@@ -108,9 +111,9 @@ export default function Layout() {
               key={item.name}
               as={Link}
               to={item.href}
-              aria-current={item.current ? 'page' : undefined}
+              aria-current={item.href === currentPath ? 'page' : undefined}
               className={classNames(
-                item.current ? 'bg-indigo-500 text-white' : 'text-gray-700 hover:bg-gray-200 hover:text-gray-900',
+                item.href === currentPath ? 'bg-indigo-500 text-white' : 'text-gray-700 hover:bg-gray-200 hover:text-gray-900',
                 'block rounded-md px-3 py-2 text-base font-medium'
               )}
             >
