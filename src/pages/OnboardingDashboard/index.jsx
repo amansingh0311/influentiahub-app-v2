@@ -1,10 +1,11 @@
-import React from "react";
-import SidebarMenu from "../../components/SidebarMenu";
+import MainLayout from "../../components/MainLayout";
+import { ConnectChannels } from "./ConnectChannels";
+
 
 export default function OnboardingDashboard() {
   return (
-    <div>
-      <SidebarMenu />{" "}
-    </div>
+    <MainLayout className="text-black">
+      <ConnectChannels/>
+    </MainLayout>
   );
 }
