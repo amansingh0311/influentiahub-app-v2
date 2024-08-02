@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BiMinus } from "react-icons/bi";
 import {
@@ -10,7 +10,6 @@ import {
   FaTiktok,
   FaPinterest,
 } from "react-icons/fa";
-import CircularProgress from "@mui/material/CircularProgress";
 import { Button } from "@tremor/react";
 import { useSnackbar } from "notistack";
 import Tooltip from "@mui/material/Tooltip"; // Import Tooltip from Material-UI
@@ -80,7 +79,7 @@ export default function SocialConnectOptions() {
   };
 
   const handleSkip = () => {
-    navigate("/create");
+    navigate("/dashboard");
   };
 
   const handleContinue = () => {
@@ -93,7 +92,7 @@ export default function SocialConnectOptions() {
 
     setLoading(true);
     setTimeout(() => {
-      navigate("/create");
+      navigate("/dashboard");
     }, 2000); // Simulate loading delay
   };
 
@@ -107,7 +106,7 @@ export default function SocialConnectOptions() {
           <div className="w-[33.3333333333%] rounded-lg border-4 border-[#7e91ff]"></div>
         </div>
         <div className="mt-4 text-[20px] 1019sm:text-[27px] font-normal">
-          Let's add some{" "}
+          Let&apos;s add some{" "}
           <span className="text-[#DD2D75] font-bold">social accounts</span>
         </div>
         <div className="mt:[10px] 1019sm:mt-[50px]">
@@ -116,8 +115,9 @@ export default function SocialConnectOptions() {
           </div>
 
           <div className="flex flex-wrap gap-4 mt-[20px]">
-            {socialNetworks.map((network) => (
+            {socialNetworks.map((network, index) => (
               <div
+                key={index}
                 className="group border px-3 py-2 min-w-full 530sm:min-w-[200px] rounded-md flex justify-between items-center gap-2 cursor-pointer hover:border-[#2C4BFF] hover:border-l-[5px] hover:pl-6 transition-all duration-200"
                 onClick={() => handleNetworkClick(network.name)}
               >

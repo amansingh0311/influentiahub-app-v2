@@ -1,0 +1,82 @@
+{
+  "hash": "769a14a7",
+  "configHash": "3dffb098",
+  "lockfileHash": "e8ebe4fa",
+  "browserHash": "590438a4",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "335eabb7",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "d4def744",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "d13d2ced",
+      "needsInterop": false
+    },
+    "notistack": {
+      "src": "../../node_modules/notistack/notistack.esm.js",
+      "file": "notistack.js",
+      "fileHash": "e7512501",
+      "needsInterop": false
+    },
+    "react-icons/bi": {
+      "src": "../../node_modules/react-icons/bi/index.mjs",
+      "file": "react-icons_bi.js",
+      "fileHash": "af4307ba",
+      "needsInterop": false
+    },
+    "react-icons/fa": {
+      "src": "../../node_modules/react-icons/fa/index.mjs",
+      "file": "react-icons_fa.js",
+      "fileHash": "2163d378",
+      "needsInterop": false
+    },
+    "@mui/material/CircularProgress": {
+      "src": "../../node_modules/@mui/material/CircularProgress/index.js",
+      "file": "@mui_material_CircularProgress.js",
+      "fileHash": "f3777920",
+      "needsInterop": false
+    },
+    "@tremor/react": {
+      "src": "../../node_modules/@tremor/react/dist/index.js",
+      "file": "@tremor_react.js",
+      "fileHash": "8437fd06",
+      "needsInterop": false
+    },
+    "@mui/material/Tooltip": {
+      "src": "../../node_modules/@mui/material/Tooltip/index.js",
+      "file": "@mui_material_Tooltip.js",
+      "fileHash": "a671c102",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-2IXNGMXR": {
+      "file": "chunk-2IXNGMXR.js"
+    },
+    "chunk-ROL7MDGW": {
+      "file": "chunk-ROL7MDGW.js"
+    },
+    "chunk-QQ2ISDUM": {
+      "file": "chunk-QQ2ISDUM.js"
+    },
+    "chunk-2TWLSXLY": {
+      "file": "chunk-2TWLSXLY.js"
+    },
+    "chunk-OSUQCFYC": {
+      "file": "chunk-OSUQCFYC.js"
+    },
+    "chunk-LABQ442N": {
+      "file": "chunk-LABQ442N.js"
+    }
+  }
+}
