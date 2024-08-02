@@ -9,7 +9,13 @@ export const verifyOtp = async (email, otp) => {
   }
 };
 
-export const signup = async (email, password, username, firstName, lastName) => {
+export const signup = async (
+  email,
+  password,
+  username,
+  firstName,
+  lastName
+) => {
   try {
     const response = await NormalAxios.post("/api/signup", {
       email,
@@ -68,3 +74,11 @@ export const refreshToken = async (refreshToken) => {
   }
 };
 
+export const logout = async () => {
+  try {
+    const response = await NormalAxios.post("/api/logout");
+    return response.data;
+  } catch (error) {
+    throw new Error(error.response.data.error);
+  }
+};
