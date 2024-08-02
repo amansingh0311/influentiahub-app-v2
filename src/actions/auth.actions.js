@@ -1,6 +1,6 @@
 import { NormalAxios } from "../config/axios.config";
 
-const verifyOtp = async (email, otp) => {
+export const verifyOtp = async (email, otp) => {
   try {
     const response = await NormalAxios.post("/api/verify-otp", { email, otp });
     return response.data;
@@ -9,7 +9,7 @@ const verifyOtp = async (email, otp) => {
   }
 };
 
-const signup = async (email, password, username, firstName, lastName) => {
+export const signup = async (email, password, username, firstName, lastName) => {
   try {
     const response = await NormalAxios.post("/api/signup", {
       email,
@@ -68,4 +68,3 @@ export const refreshToken = async (refreshToken) => {
   }
 };
 
-export { verifyOtp, signup, forgotPassword, resetPassword, login };
